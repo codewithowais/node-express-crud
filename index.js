@@ -7,6 +7,8 @@ const User = require("./models/user");
 const DbURL =
   "mongodb+srv://ketoliy276:VHEcTHWE2cfqVm1y@cluster0.kekoxm8.mongodb.net/?retryWrites=true&w=majority";
 
+const port = 3000;
+
 mongoose
   .connect(DbURL)
   .then(() => console.log("Database connected..."))
@@ -51,6 +53,6 @@ app.delete("/:id", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log(`Server is running on ${3000}`);
+app.listen(port, () => {
+  console.log(`Server is running on ${port}`);
 });
